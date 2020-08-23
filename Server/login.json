@@ -1,0 +1,17 @@
+{
+    "data": [
+        {
+            "username": "test1",
+            "password": "test1@123",
+            "level": "Level 1"
+        },
+        {
+            "username": "test2",
+            "password": "test2@123",
+            "level": "Level 2"
+           
+        }
+       
+        
+    ]
+}

@@ -1,0 +1,35 @@
+
+<div class="col-md-6 user-container">
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="_id">ID:</label>
+        <input type="text"  [disabled]="enabled" formControlName="_id" placeholder="_id" name="_id" class="form-control" id="_id">
+      </div>
+  
+  
+      <div class="form-group">
+        <label for="name">Customer Name:</label>
+        <input formControlName="name" [disabled]="enabled" placeholder="First Name" name="name" class="form-control" id="name">
+      </div>
+  
+      <div class="form-group">
+        <label for="insurance">Insurance:</label>
+        <input formControlName="insurance"   [disabled]="enabled"  placeholder="insurance" name="insurance" class="form-control" id="insurance">
+      </div>
+  
+      <div class="form-group">
+        <label for="value">Value:</label>
+        <input type="number" [disabled]="enabled" formControlName="value" placeholder="value"  (change)="clacValPremiium($event)" name="value" class="form-control" id="value">
+      </div>
+  
+      <div class="form-group">
+        <label for="rate">Rate:</label>
+        <input type="number"  [disabled]="enabled"formControlName="rate" placeholder="rate" (change)="clacPremiium($event)" name="rate" class="form-control" id="rate">
+      </div>
+      <div class="form-group">
+        <label for="premiumrate">Premium:</label>
+        <input type="number" [attr.disabled]="true" formControlName="premiumrate" placeholder="premiumrate" name="premiumrate" class="form-control" id="premiumrate">
+      </div>
+      <button class="btn btn-success" >{{buttonText}}</button>
+    </form>
+  </div>
